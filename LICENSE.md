@@ -1,8 +1,9 @@
 # Proprietary Research License
+***Last Updated: August 8th, 2025***
 
 # Dual Research and Commercial License
 
-The Fully Unified Model is provided under a dual-license to foster open academic research while ensuring commercial applications are aligned with the project's ethical principles.
+The Adaptive Modular Network, Void Dynamics Model, proprietary algorithms under the umbrella of the Fully Unified Model are provided under a dual-license to foster open academic research while ensuring commercial applications are aligned with the project's ethical principles.
 
 
 **Copyright © 2025 Justin K. Lietz, Neuroca, Inc. All Rights Reserved.**
@@ -33,7 +34,7 @@ This repository is available under two distinct licensing tracks:
 
 1. **Required Attribution**: All academic use must include proper citation:
    ```
-   Lietz, J.K. (2025). The Fully Unified Model: Cultivating Hyperintelligence in Cybernetic Organisms. 
+   Lietz, J.K. (2025). The Fully Unified Model: Observations in Void Dynamics. 
    Neuroca, Inc. Academic Research License.
    ```
 
