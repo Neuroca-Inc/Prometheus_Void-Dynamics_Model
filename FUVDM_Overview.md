@@ -226,8 +226,7 @@ fum_rt parity (independent runners; same metrics schema)
 
 ## Archive / informal content
 
-- Non-normative transcripts or exploratory notes are labeled:  
-  Example: [20250809_voxtrium_message_2.md](Prometheus_FUVDM/derivation/supporting_work/voxtrium/20250809_voxtrium_message_2.md:1)
+- Non-normative transcripts or exploratory notes are labeled
 
 ## Licensing and citation
 
