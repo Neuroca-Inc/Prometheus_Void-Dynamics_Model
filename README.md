@@ -31,7 +31,7 @@ This folder provides a public, paper‑only view of the Void Dynamics program. I
 
 ## What’s not included
 - Source code, executables, or private runtime harnesses.
-- Logs/figures or any artifacts sufficient to reconstruct proprietary implementations.
+- Logs/figures or any artifacts that would be sufficient to easily reconstruct proprietary implementations, notebooks with clear falsifiable code will be provided soon.
 - Drafts outside the derivation index above.
 
 ## How to read these papers
