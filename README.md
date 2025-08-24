@@ -33,7 +33,7 @@ What’s included (papers)
 
 What’s explicitly not included here
 - Source code, executables, and private runtime harnesses.
-- Generated logs/figures and any artifacts sufficient to reconstruct proprietary implementations.
+- Generated logs and any artifacts sufficient to reconstruct proprietary implementations.
 - Any unreviewed drafts outside the derivation index above.
 
 How to read these papers
