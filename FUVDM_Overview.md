@@ -122,6 +122,7 @@ Linear dispersion about $\phi \approx 0$ (periodic, linearized RD) [PROVEN]
 $$
 \sigma_d(m) = r - \frac{4D}{\Delta x^{2}} \sin^{2}\!\left(\frac{\pi m}{N}\right)
 $$
+
 (RD-5)
 
 $$
