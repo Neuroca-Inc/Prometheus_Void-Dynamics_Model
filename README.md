@@ -2,7 +2,7 @@
 ***Current Status:*** Working on applying discovered RD concepts to neural plasticity in the Void Dynamics Intelligence Model (coming to public soon) <br>
 ***Status Last Updated:*** Aug 25, 2025
 
-This folder provides a public, paper‑only view of the Void Dynamics program. It summarizes the theory and validation write‑ups for review by physicists, applied mathematicians, and scientifically minded engineers. No source code is included.
+This folder provides a public, paper‑only view of the Void Dynamics program. It summarizes the theory and validation write‑ups for review by physicists, applied mathematicians, and scientifically minded engineers. Proprietary source code is not included yet.
 
 ## What this is
 - A set of derivation papers that establish a clean baseline physics slice using reaction–diffusion (RD).
