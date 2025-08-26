@@ -18,10 +18,10 @@ Status
 - Scripts and outputs follow the same scheme as the front-speed validation.
 
 References (implementation)
-- Script: [rd_dispersion_experiment.py](code/physics/rd_dispersion_experiment.py:1)
-- Validation plan: [rd_validation_plan.md](rd_validation_plan.md:1)
-- Status log: [CORRECTIONS.md](CORRECTIONS.md:1)
-- fum_rt parity runner: [rd_dispersion_runner.py](Prometheus_FUVDM/fum_rt/physics/rd_dispersion_runner.py:1)
+- Script: [rd_dispersion_experiment.py](code/physics/rd_dispersion_experiment.py
+- Validation plan: [rd_validation_plan.md](rd_validation_plan.md
+- Status log: [CORRECTIONS.md](CORRECTIONS.md
+- fum_rt parity runner: [rd_dispersion_runner.py](../../fum_rt/physics/rd_dispersion_runner.py
 
 Method
 - Periodic BCs; explicit Euler on u_t = D u_xx + r u with dt respecting diffusion CFL.
@@ -69,7 +69,7 @@ Troubleshooting
 
 fum_rt parity runner
 - Independent mirror (same metrics/output schema) for cross-stack parity:
-  - [rd_dispersion_runner.py](Prometheus_FUVDM/fum_rt/physics/rd_dispersion_runner.py:1)
+  - [rd_dispersion_runner.py](../../fum_rt/physics/rd_dispersion_runner.py
 - Rationale is documented in-file (“CHANGE REASON”): physics proven via derivation; runtime mirror does not alter core dynamics.
 
 Reproduction checklist
@@ -81,4 +81,4 @@ Reproduction checklist
 4) Archive produced JSON/PNG under version control as needed.
 
 Provenance and tagging
-- Dispersion is [PROVEN] in [CORRECTIONS.md](CORRECTIONS.md:1) with default and refined grid results.
+- Dispersion is [PROVEN] in [CORRECTIONS.md](CORRECTIONS.md with default and refined grid results.

@@ -22,11 +22,11 @@ Scope: Tier-0 correctness fixes (numerics, stability narrative) and unification 
   - Before: Hardwired EFT vacuum/mass invariants in main text.
   - After: RD is canonical; EFT invariants referenced only to EFT doc; removed back‑solving (α,β) from (v,m_eff) in RD narrative.
 
-- [derivation/symmetry_analysis.md](symmetry_analysis.md)
+- [symmetry_analysis.md](derivation/foundations/symmetry_analysis.md)
   - Before: Text implied “false/true vacuum” using EFT values in a general context.
   - After: Clarified RD vs EFT contexts; RD fixed point W* = r/u (r>0) vs EFT vacuum v = 1 − β/α as future‑work.
 
-- [derivation/effective_field_theory_approach.md](effective_field_theory_approach.md)
+- [effective_field_theory_approach.md](derivation/effective_field_theory/effective_field_theory_approach.md)
   - Before: No scope banner.
   - After: Quarantine banner; note m_eff = √(α−β) is parameter‑dependent and unitized via τ.
 
@@ -38,11 +38,11 @@ Scope: Tier-0 correctness fixes (numerics, stability narrative) and unification 
   - Before: Implied fixed m_eff; mixed normalization constraint Ja² = 1/2.
   - After: Header note: RD canonical; EFT mass parameter‑dependent; lattice normalization c² = 2 J a² (per‑site); do not impose Ja² = 1/2.
 
-- [derivation/fum_voxtrium_mapping.md](fum_voxtrium_mapping.md)
+- [fum_voxtrium_mapping.md](derivation/effective_field_theory/fum_voxtrium_mapping.md)
   - Before: Referred to EFT EOM as dimensionless default.
   - After: RD mapping made canonical; EFT equation kept for EFT context only.
 
-- New: [METRICS.md](Prometheus_FUVDM/METRICS.md)
+- New: [METRICS.md](METRICS.md)
   - Metrics skeleton for RD dynamics, SIE/TDA system metrics, reproducibility pointers.
 
 ## Numeric Corrections
@@ -61,21 +61,21 @@ All fixed-number statements were replaced with parameter‑dependent forms and e
 
 ## Kinetic/Lattice Normalization
 
-- Adopted discrete‑action derivation already present in [derivation/kinetic_term_derivation.md](kinetic_term_derivation.md) with c² = 2 J a² (per‑site convention) or c² = κ a² (per‑edge, κ = 2J). No microscopic constraint ties J to a; c can be set by units.
+- Adopted discrete‑action derivation already present in [kinetic_term_derivation.md](derivation/effective_field_theory/kinetic_term_derivation.md) with c² = 2 J a² (per‑site convention) or c² = κ a² (per‑edge, κ = 2J). No microscopic constraint ties J to a; c can be set by units.
 
 ## Edit Log (file, change)
 
-- [derivation/FUVDM_Overview.md](FUVDM_Overview.md): Replace overview with RD canonical banner; corrected mapping (r = α − β, u = α); EFT scoped.
+- [FUVDM_Overview.md](FUVDM_Overview.md): Replace overview with RD canonical banner; corrected mapping (r = α − β, u = α); EFT scoped.
 - [derivation/code/computational_proofs/FUM_theory_and_results.md](code/computational_proofs/FUM_theory_and_results.md): Insert RD note; replace fixed m_eff numeric with param‑dependent form.  
-- [derivation/discrete_to_continuum.md](discrete_to_continuum.md): Update objective to RD; add D mapping text; keep EFT derivation as future work.  
-- [derivation/memory_steering.md](memory_steering.md): Align with RD canonical; restrict EFT formulas to EFT doc; remove back‑solve in RD section.  
-- [derivation/symmetry_analysis.md](symmetry_analysis.md): Clarify RD vs EFT contexts in interpretations.  
-- [derivation/effective_field_theory_approach.md](effective_field_theory_approach.md): Add quarantine banner.  
+- [discrete_to_continuum.md](derivation/foundations/discrete_to_continuum.md): Update objective to RD; add D mapping text; keep EFT derivation as future work.  
+- [memory_steering_acceptance_verification.md](derivation/memory_steering/memory_steering_acceptance_verification.md): Align with RD canonical; restrict EFT formulas to EFT doc; remove back‑solve in RD section.  
+- [symmetry_analysis.md](derivation/foundations/symmetry_analysis.md): Clarify RD vs EFT contexts in interpretations.  
+- [effective_field_theory_approach.md](derivation/effective_field_theory/effective_field_theory_approach.md): Add quarantine banner.  
 - [derivation/code/computational_proofs/void_dynamics_theory.md](code/computational_proofs/void_dynamics_theory.md): Add scope note at top.  
 - [derivation/support/references/Suggestions.md](support/references/Suggestions.md): Insert header note; prevent hard constraints on Ja².  
-- [derivation/fum_voxtrium_mapping.md](fum_voxtrium_mapping.md): Make RD canonical; EFT references scoped.  
-- [METRICS.md](Prometheus_FUVDM/METRICS.md): New file with metrics skeleton.
-- [derivation/rd_front_speed_validation.md](rd_front_speed_validation.md:1): Add reproducible CLI, output routing, acceptance criteria, representative PASS metrics.
+- [fum_voxtrium_mapping.md](derivation/effective_field_theory/fum_voxtrium_mapping.md): Make RD canonical; EFT references scoped.  
+- [METRICS.md](METRICS.md): New file with metrics skeleton.
+- [rd_front_speed_validation.md](derivation/reaction_diffusion/rd_front_speed_validation.md): Add reproducible CLI, output routing, acceptance criteria, representative PASS metrics.
 - [derivation/code/physics/rd_front_speed_experiment.py](code/physics/rd_front_speed_experiment.py:1): Set defaults (N=1024, cfl=0.2, level=0.1, x0=-60, fit 0.6–0.9); route outputs to derivation/code/outputs/{figures,logs}; robust tracking and fit.
 - New: [derivation/code/physics/rd_front_speed_sweep.py](code/physics/rd_front_speed_sweep.py:1): Sweep runner producing CSV summary under derivation/code/outputs/logs/.
 - New: [derivation/code/physics/rd_dispersion_experiment.py](code/physics/rd_dispersion_experiment.py:1): Linear dispersion validation script with periodic BC; logs/figure auto-routing; acceptance criteria.

@@ -84,5 +84,5 @@ Reproducibility Checklist
 - Keep observe vs advise runs archived with JSON and PNG artifacts.
 
 References
-- Fluid mapping powered this construction; see cavity announcers and CLI in [lid_cavity_benchmark.py](Prometheus_FUVDM/derivation/code/physics/fluid_dynamics/lid_cavity_benchmark.py:356).
-- Bus, Reducer, Walker API: [walkers.py](Prometheus_FUVDM/derivation/code/physics/fluid_dynamics/telemetry/walkers.py:1).
+- Fluid mapping powered this construction; see cavity announcers and CLI in [lid_cavity_benchmark.py](../../code/physics/fluid_dynamics/lid_cavity_benchmark.py:356).
+- Bus, Reducer, Walker API: [walkers.py](../../code/physics/fluid_dynamics/telemetry/walkers.py.
