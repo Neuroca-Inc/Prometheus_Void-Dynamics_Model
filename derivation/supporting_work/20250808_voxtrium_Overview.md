@@ -1,7 +1,7 @@
 # Macro Banner (FRW + Continuity + Source + Micro-Informed Coefficients)
 
 **FRW Equation**  
-$H^2=\tfrac{8\pi G}{3}\,(\rho_b+\rho_{\rm DM}+\rho_r^{\rm std}+\rho_{\rm GW}+\rho_\Lambda)$  
+$H^2=\frac{8\pi G}{3}\,(\rho_b+\rho_{\rm DM}+\rho_r^{\rm std}+\rho_{\rm GW}+\rho_\Lambda)$  
 $\text{RHS }={\rm GeV}^2\ \text{(natural units)}$
 
 ---
@@ -80,9 +80,9 @@ Thus: $(|\Omega|\,R_\ast)$ is dimensionless, $(\kappa/K_s)$ is GeV, and $\alpha_
 
 ## Soliton Relations
 
-$R_\ast=\tfrac{c_R}{eK_s}$  
+$R_\ast=\frac{c_R}{eK_s}$  
 $X\equiv eK_s$  
-$m=\tfrac{c_m K_s}{e}$  
+$m=\frac{c_m K_s}{e}$  
 
 $\text{Units: }{\rm GeV}^{-1},\ {\rm GeV},\ {\rm GeV}\ \text{respectively}$
 
@@ -117,13 +117,13 @@ $\ f_{\rm inj}\ll 1$
 
 # SU(2) Skyrme Microphysics (Locked Normalization)
 
-$U(x)\in{\rm SU}(2)$, $L_\mu\equiv U^\dagger\partial_\mu U$, $\mathrm{Tr}(T^aT^b)=\tfrac12\delta^{ab}$  
+$U(x)\in{\rm SU}(2)$, $L_\mu\equiv U^\dagger\partial_\mu U$, $\mathrm{Tr}(T^aT^b)=\frac{1}{2}\delta^{ab}$  
 
-$\mathcal L=\tfrac{F^2}{16}\,\mathrm{Tr}(L_\mu L^\mu)+\tfrac{1}{32 e^2}\,\mathrm{Tr}([L_\mu,L_\nu]^2)$  
+$\mathcal L=\frac{F^2}{16}\,\mathrm{Tr}(L_\mu L^\mu)+\frac{1}{32 e^2}\,\mathrm{Tr}([L_\mu,L_\nu]^2)$  
 $F$ [GeV], $e$ dimensionless  
 
 With $K_s\equiv F/2$:  
-$\mathcal L=\tfrac{K_s^2}{4}\,\mathrm{Tr}(L_\mu L^\mu)+\tfrac{1}{32 e^2}\,\mathrm{Tr}([L_\mu,L_\nu]^2)$  
+$\mathcal L=\frac{K_s^2}{4}\,\mathrm{Tr}(L_\mu L^\mu)+\frac{1}{32 e^2}\,\mathrm{Tr}([L_\mu,L_\nu]^2)$  
 
 $U(\mathbf r)=\exp\big(i\,\hat{\mathbf r}\cdot\boldsymbol{\tau}\,f(r)\big)$  
 $x\equiv eK_s r$  
@@ -134,7 +134,7 @@ $\epsilon$: dimensionless $\Rightarrow E$ [GeV]
 $c_m\equiv 4\pi\int_0^\infty dx\,\epsilon(x)$  
 $m=c_m K_s/e$  
 
-$R_\ast=\tfrac{c_R}{eK_s}$,  
+$R_\ast=\frac{c_R}{eK_s}$,  
 $c_R\equiv\left(\int_0^\infty dx\,x^2\epsilon(x)\right)^{1/2}\Big/\left(\int_0^\infty dx\,\epsilon(x)\right)^{1/2}$  
 
 $X\equiv eK_s$  
@@ -177,7 +177,7 @@ $\dot S_{\rm BH}[{\rm GeV}],\ A[{\rm GeV}^{-2}],\ G[{\rm GeV}^{-2}],\ S_{\rm BH}
 
 $(\sigma/m)_{\rm cgs}(v\to 0)=(\sigma_0(0)/m)\,(2.184\times10^{-4})$  
 
-$(\sigma_T/m)(v)=\frac{(\sigma/m)_0}{(1-\tfrac12 a r_e k^2)^2+(a k)^2}\times C_T(k)$  
+$(\sigma_T/m)(v)=\frac{(\sigma/m)_0}{(1-\frac{1}{2} a r_e k^2)^2+(a k)^2}\times C_T(k)$  
 
 $C_T(k)=\frac{1}{4\pi}\int d\Omega\,(1-\cos\theta)\,|F_{\rm prof}(q)|^2,\ q=2k\sin(\theta/2)$  
 
@@ -281,7 +281,7 @@ Define the structure-formation injection fraction $f_{\rm inj}(t)\equiv\dfrac{p_
 
 (iii) Co-evolution ratios independent of astrophysics: whenever $p_i$ are constant in an epoch, the instantaneous rates obey $\dot\rho_{\rm DM}/\dot\rho_\Lambda=(p_{\rm DM}/p_\Lambda)$ and $\dot\rho_{\rm GW}/\dot\rho_\Lambda=(p_{\rm GW}/p_\Lambda)$ (dimensionless), which is a falsifiable relation between background drift and sourcing channels.  
 
-(iv) BH-history link: $\rho_\Lambda(t)=\rho_{\Lambda0}+\tfrac{1}{V_c}\int\alpha_h(t')\,\dot S_{\rm hor}(t')\,dt'$ and $\rho_{\rm DM}(a)=a^{-3}\big[\rho_{\rm DM}(a_i)a_i^3+\int_{t_i}^{t}dt'\,a(t')^3\,p_{\rm DM}(\varepsilon_h/V_c)\,\dot S_{\rm hor}(t')\big]$ correlate deviations in $H(z)$ and $\rho_{\rm DM}(z)$ with the empirically constrained BH mass function and merger rate (integrands in GeV$^5$).  
+(iv) BH-history link: $\rho_\Lambda(t)=\rho_{\Lambda0}+\frac{1}{V_c}\int\alpha_h(t')\,\dot S_{\rm hor}(t')\,dt'$ and $\rho_{\rm DM}(a)=a^{-3}\big[\rho_{\rm DM}(a_i)a_i^3+\int_{t_i}^{t}dt'\,a(t')^3\,p_{\rm DM}(\varepsilon_h/V_c)\,\dot S_{\rm hor}(t')\big]$ correlate deviations in $H(z)$ and $\rho_{\rm DM}(z)$ with the empirically constrained BH mass function and merger rate (integrands in GeV$^5$).  
 
 (v) Micro→macro lock-in: once $m=c_m K_s/e$ and $(\sigma/m)_0$ are fixed at dwarfs, $a$ and $r_e=\xi R_\ast$ are determined and the entire curve $(\sigma_T/m)(v)$ becomes parameter-free aside from the optional threshold $m_\phi\sim 1/R_\ast$ (units $a,r_e$ in GeV$^{-1}$).
 

@@ -13,7 +13,7 @@
 
 | Subsystem | Symbol        | Definition                                                  | Meaning                    | Typical from Void Dynamics runs |
 | --------- | ------------- | ----------------------------------------------------------- | -------------------------- | -------------------------------- |
-| LBM       | $\nu$         | $\nu = \tfrac{1}{3}\bigl(\tau - \tfrac{1}{2}\bigr)$         | kinematic viscosity        | 0.1333 ($\tau=0.9$)             |
+| LBM       | $\nu$         | $\nu = \frac{1}{3}(\tau - \frac{1}{2})$         | kinematic viscosity        | 0.1333 ($\tau=0.9$)             |
 | LBM       | $\mathrm{Re}$ | $\mathrm{Re} = \dfrac{U L}{\nu}$                            | inertia vs. viscosity      | 9.6 ($64^2$), 19.2 ($128^2$)    |
 | LBM       | $\mathrm{Ma}$ | $\mathrm{Ma} = \dfrac{U}{\sqrt{1/3}}$                       | compressibility            | 0.035–0.017 (low)               |
 | RD        | $\Pi_{Dr}$    | $\Pi_{Dr} = \dfrac{D}{r L^{2}}$                             | diffusion at scale $L$     | choose $L$ → report             |

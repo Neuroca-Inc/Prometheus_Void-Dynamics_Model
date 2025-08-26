@@ -28,7 +28,7 @@ $$
 Continuum PDE (1D notation; generalizes by components):
 
 $$
-\partial_t \phi = D\, \nabla^{2}\phi + r\, \phi - u\, \phi^{2} \quad \bigl[ -\lambda\, \phi^{3} \text{ (optional stabilization)} \bigr]
+\partial_t \phi = D\, \nabla^{2}\phi + r\, \phi - u\, \phi^{2} \quad \left[ -\lambda\, \phi^{3} \text{ (optional stabilization)} \right]
 $$
 
 (RD-2)
@@ -38,7 +38,7 @@ Discrete → continuum mapping:
 $$
 \begin{aligned}
 D &= J a^{2} && \text{(site Laplacian)}\\
-D &= \tfrac{J}{z} a^{2} && \text{(neighbor-average form)}\\
+D &= \frac{J}{z} a^{2} && \text{(neighbor-average form)}\\
 r &= \alpha - \beta,\quad u = \alpha
 \end{aligned}
 $$
@@ -78,7 +78,7 @@ References:
 
 | Subsystem | Symbol | Definition | Meaning | Typical from runs |
 | --- | --- | --- | --- | --- |
-| LBM | $\nu$ | $\tfrac{1}{3}\bigl(\tau - \tfrac{1}{2}\bigr)$ | kinematic viscosity | 0.1333 ($\tau=0.9$) |
+| LBM | $\nu$ | $\frac{1}{3}(\tau - \frac{1}{2})$ | kinematic viscosity | 0.1333 ($\tau=0.9$) |
 | LBM | $\mathrm{Re}$ | $\dfrac{U L}{\nu}$ | inertia vs. viscosity | 9.6 (64²), 19.2 (128²) |
 | LBM | $\mathrm{Ma}$ | $\dfrac{U}{\sqrt{1/3}}$ | compressibility | 0.035–0.017 (low) |
 | RD | $\Pi_{Dr}$ | $\dfrac{D}{r L^{2}}$ | diffusion at scale $L$ | choose $L$ → report |
@@ -160,7 +160,7 @@ Optional cubic term $-\lambda\, \phi^{3}$ stabilizes large-amplitude regimes; of
 Diffusion mapping (see also RD-3):
 
 $$
-D = J a^{2} \quad \text{or} \quad D = \tfrac{J}{z} a^{2}
+D = J a^{2} \quad \text{or} \quad D = \frac{J}{z} a^{2}
 $$
 
 (RD-3′)

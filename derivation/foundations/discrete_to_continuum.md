@@ -84,7 +84,7 @@ $$
 
 Crucially, the second-order time derivative in the continuum equation is not imposed ad hoc; it follows from varying the continuum Lagrangian density fixed by the lattice derivation of the kinetic and gradient terms (see [derivation/kinetic_term_derivation.md](derivation/kinetic_term_derivation.md:78-116)):
 $$
-\mathcal{L} \;=\; \tfrac{1}{2}(\partial_t \phi)^2 \;-\; J a^2\,(\nabla \phi)^2 \;-\; V(\phi).
+\mathcal{L} \;=\; \frac{1}{2}(\partial_t \phi)^2 \;-\; J a^2\,(\nabla \phi)^2 \;-\; V(\phi).
 $$
 The Euler–Lagrange equation gives
 $$
@@ -134,7 +134,7 @@ $$
 
 The derived continuum dynamics are nonlinear and exhibit a tachyonic instability about $\phi = 0$ stabilized by self‑interaction. For a well‑posed, bounded EFT we adopt the standard symmetric quartic as the default baseline:
 $$
-V_{\text{baseline}}(\phi)\;=\;-\tfrac{1}{2}\,\mu^2\,\phi^2\;+\;\tfrac{\lambda}{4}\,\phi^4,\qquad \mu^2>0,\ \lambda>0.
+V_{\text{baseline}}(\phi)\;=\;-\frac{1}{2}\,\mu^2\,\phi^2\;+\;\frac{\lambda}{4}\,\phi^4,\qquad \mu^2>0,\ \lambda>0.
 $$
 - Linearizing about $\phi = 0$ gives $m_0^2 = -\mu^2 < 0$ (tachyonic).
 - The true minima are at $\phi = \pm v$ with $v = \mu/\sqrt{\lambda}$.
@@ -153,7 +153,7 @@ The earlier cubic–quadratic structure in our EOM (the $\alpha\,\phi^2 - (\alph
 
 We take as default
 $$
-V(\phi)\;=\;-\tfrac{1}{2}\,\mu^2\,\phi^2\;+\;\tfrac{\lambda}{4}\,\phi^4,\qquad \mu^2>0,\ \lambda>0.
+V(\phi)\;=\;-\frac{1}{2}\,\mu^2\,\phi^2\;+\;\frac{\lambda}{4}\,\phi^4,\qquad \mu^2>0,\ \lambda>0.
 $$
 Stationary points satisfy
 $$
@@ -175,7 +175,7 @@ $$
 
 To prefer one vacuum and connect to the discrete‑to‑continuum coefficients, include a small cubic bias:
 $$
-V(\phi)\;=\;-\tfrac{1}{2}\,\mu^2\,\phi^2\;+\;\tfrac{\lambda}{4}\,\phi^4\;+\;\tfrac{\gamma}{3}\,\phi^3,\qquad |\gamma|\ll \mu^2\sqrt{\lambda}.
+V(\phi)\;=\;-\frac{1}{2}\,\mu^2\,\phi^2\;+\;\frac{\lambda}{4}\,\phi^4\;+\;\frac{\gamma}{3}\,\phi^3,\qquad |\gamma|\ll \mu^2\sqrt{\lambda}.
 $$
 For small fields the equation of motion reads
 $$
