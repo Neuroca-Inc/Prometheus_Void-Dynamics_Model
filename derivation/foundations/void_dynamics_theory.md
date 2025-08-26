@@ -103,7 +103,7 @@ L^n \;=\; a^d \sum_i\Bigg[
 $$
 
 * $\kappa$ is the **per‑edge coupling** (undirected edges counted once).
-  If you prefer the per‑site convention $\frac{1}{2}\sum_{j\in N(i)}J(W_j-W_i)^2$ that sums both $\pm\mu$, then $\kappa = 2J$. This keeps the algebra consistent with the write‑up.&#x20;
+  If you prefer the per‑site convention $\frac{1}{2}\sum_{j\in N(i)}J(W_j-W_i)^2$ that sums both $\pm\mu$, then $\kappa = 2J$. This keeps the algebra consistent with the write‑up.
 
 **Euler–Lagrange on the lattice (central in time).** Varying $W_i^n$ gives
 
@@ -113,7 +113,7 @@ $$
 \;+\;V'\!\big(W_i^{\,n}\big)=0.
 $$
 
-That’s the **second‑order** discrete equation (no “promotion” needed). This replaces the first‑order heuristic in the earlier continuum note.&#x20;
+That’s the **second‑order** discrete equation (no “promotion” needed). This replaces the first‑order heuristic in the earlier continuum note.
 
 # Continuum limit and the exact spatial prefactor
 
@@ -147,7 +147,7 @@ $$
 $$
 
 * If you keep the per‑site $J$ (both $\pm\mu$ counted in $N(i)$), it’s equivalent to
-  $\mathcal{L}=\frac{1}{2}(\partial_t\phi)^2 - J a^2(\nabla\phi)^2 - V(\phi)$ and the **EOM** carries $c^2=2Ja^2$. Both conventions are fine; just be consistent about whether $\kappa$ is per edge or per oriented difference. the current draft used this per‑site convention and landed on $J a^2(\nabla\phi)^2$; the only fix is to **not** force $J a^2=\frac{1}{2}$**—just read off $c^2=2J a^2$**.&#x20;
+  $\mathcal{L}=\frac{1}{2}(\partial_t\phi)^2 - J a^2(\nabla\phi)^2 - V(\phi)$ and the **EOM** carries $c^2=2Ja^2$. Both conventions are fine; just be consistent about whether $\kappa$ is per edge or per oriented difference. the current draft used this per‑site convention and landed on $J a^2(\nabla\phi)^2$; the only fix is to **not** force $J a^2=\frac{1}{2}$**—just read off $c^2=2J a^2$**.
 
 **Consistency check (Dirichlet energy mapping).**
 From the interaction energy $\frac12\sum_{j\in N(i)}J(W_j-W_i)^2$ on a cubic lattice, the per‑site continuum limit is
@@ -156,18 +156,18 @@ $$
 \frac12\,J\sum_{j\in N(i)}(W_j-W_i)^2 \;\longrightarrow\; J a^2 (\nabla\phi)^2,
 $$
 
-precisely what I wrote; the “factor of 2” is the $\pm\mu$ neighbor pair. Choosing the per‑edge $\kappa$ makes the canonical $\frac{1}{2}(\nabla\phi)^2$ structure explicit and avoids having to pin $J a^2$ to a number.&#x20;
+precisely what I wrote; the “factor of 2” is the $\pm\mu$ neighbor pair. Choosing the per‑edge $\kappa$ makes the canonical $\frac{1}{2}(\nabla\phi)^2$ structure explicit and avoids having to pin $J a^2$ to a number.
 
 # Plugging in the potential (and optional $\lambda\phi^4$)
 
 * With the $V(\phi)=\frac{\alpha}{3}\phi^3-\frac{\alpha-\beta}{2}\phi^2$, the **linearized** mass about a vacuum $v$ is $m^2=V''(v)$.
-* If you include the stabilization I sketched, $V\to V+\frac{\lambda}{4}\phi^4$, all formulas remain the same; only $V'(\phi)$ and $m^2=V''(v)$ update.&#x20;
+* If you include the stabilization I sketched, $V\to V+\frac{\lambda}{4}\phi^4$, all formulas remain the same; only $V'(\phi)$ and $m^2=V''(v)$ update.
 
 # Changes relative to earlier drafts
 
-* Replaced “promote to second order” with a **variational** derivation from a discrete action → central‑difference EOM.&#x20;
-* Made the spatial prefactor **exact**: $c^2=\kappa a^2$ (or $2Ja^2$ in the notation). No need to impose $J a^2=\frac{1}{2}$.&#x20;
-* Keeps the earlier gradient‑from‑neighbors derivation intact, but clarifies the edge‑counting convention so factors are unambiguous.&#x20;
+* Replaced “promote to second order” with a **variational** derivation from a discrete action → central‑difference EOM.
+* Made the spatial prefactor **exact**: $c^2=\kappa a^2$ (or $2Ja^2$ in the notation). No need to impose $J a^2=\frac{1}{2}$.
+* Keeps the earlier gradient‑from‑neighbors derivation intact, but clarifies the edge‑counting convention so factors are unambiguous.
 
 # Proposition: Continuum limit of the FUM lattice action
 
