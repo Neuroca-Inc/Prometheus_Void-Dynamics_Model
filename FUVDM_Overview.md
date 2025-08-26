@@ -72,7 +72,7 @@ $$
 (EFT-3)
 
 References:  
-[kinetic_term_derivation.md](Prometheus_FUVDM/derivation/effective_field_theory/kinetic_term_derivation.md:1), [effective_field_theory_approach.md](Prometheus_FUVDM/derivation/effective_field_theory/effective_field_theory_approach.md:1)
+[kinetic_term_derivation.md](derivation/effective_field_theory/kinetic_term_derivation.md), [effective_field_theory_approach.md](derivation/effective_field_theory/effective_field_theory_approach.md)
 
 ## FUVDM Dimensionless Constants (sanity set)
 
@@ -113,9 +113,9 @@ $$
 (RD-4)
 
 Representative defaults: $c_{\mathrm{meas}} \approx 0.953$ vs $c_{\mathrm{th}} = 1.0$, $\mathrm{rel\_err} \approx 0.047$, $R^{2} \approx 0.999996$ (meets gates)  
-Documentation: [rd_front_speed_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_front_speed_validation.md:1)  
-Script: [rd_front_speed_experiment.py](Prometheus_FUVDM/derivation/code/physics/reaction_diffusion/rd_front_speed_experiment.py:1)  
-Sweep: [rd_front_speed_sweep.py](Prometheus_FUVDM/derivation/code/physics/reaction_diffusion/rd_front_speed_sweep.py:1)
+Documentation: [rd_front_speed_validation.md](derivation/reaction_diffusion/rd_front_speed_validation.md)  
+Script: [rd_front_speed_experiment.py](derivation/code/physics/reaction_diffusion/rd_front_speed_experiment.py)  
+Sweep: [rd_front_speed_sweep.py](derivation/code/physics/reaction_diffusion/rd_front_speed_sweep.py)
 
 Linear dispersion about $\phi \approx 0$ (periodic, linearized RD) [PROVEN]
 
@@ -132,14 +132,14 @@ $$
 (RD-6)
 
 Representative defaults: median rel. error $\approx 1.45\times 10^{-3}$, $R^{2}_{\text{array}} \approx 0.99995$ (meets gates)  
-Documentation: [rd_dispersion_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_dispersion_validation.md:1)  
-Script: [rd_dispersion_experiment.py](Prometheus_FUVDM/derivation/code/physics/reaction_diffusion/rd_dispersion_experiment.py:1)
+Documentation: [rd_dispersion_validation.md](derivation/reaction_diffusion/rd_dispersion_validation.md)  
+Script: [rd_dispersion_experiment.py](derivation/code/physics/reaction_diffusion/rd_dispersion_experiment.py)
 
 Consolidated plan and acceptance gates:  
-[rd_validation_plan.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_validation_plan.md:1)
+[rd_validation_plan.md](derivation/reaction_diffusion/rd_validation_plan.md)
 
 Status log and edits:  
-[CORRECTIONS.md](Prometheus_FUVDM/derivation/CORRECTIONS.md:1)
+[CORRECTIONS.md](CORRECTIONS.md)
 
 ## Stability and fixed points (RD)
 
@@ -174,8 +174,8 @@ $$
 (EFT-1′)
 
 References:  
-[discrete_to_continuum.md](Prometheus_FUVDM/derivation/foundations/discrete_to_continuum.md:1),  
-[kinetic_term_derivation.md](Prometheus_FUVDM/derivation/effective_field_theory/kinetic_term_derivation.md:1)
+[discrete_to_continuum.md](derivation/foundations/discrete_to_continuum.md),  
+[kinetic_term_derivation.md](derivation/effective_field_theory/kinetic_term_derivation.md)
 
 ## Scope boundaries and quarantine (policy)
 
@@ -190,8 +190,8 @@ $$
 (EFT-EX)
 
 EFT references:  
-- [effective_field_theory_approach.md](Prometheus_FUVDM/derivation/effective_field_theory/effective_field_theory_approach.md:1)  
-- [fum_voxtrium_mapping.md](Prometheus_FUVDM/derivation/effective_field_theory/fum_voxtrium_mapping.md:1)
+- [effective_field_theory_approach.md](derivation/effective_field_theory/effective_field_theory_approach.md)  
+- [fum_voxtrium_mapping.md](derivation/effective_field_theory/fum_voxtrium_mapping.md)
 
 ## Reproducibility and outputs
 
@@ -200,8 +200,8 @@ EFT references:
 - Filenames: <script>_<UTC timestamp>.png/json
 
 fum_rt parity (independent runners; same metrics schema)  
-- Front-speed mirror: [rd_front_speed_runner.py](Prometheus_FUVDM/fum_rt/physics/rd_front_speed_runner.py:1)  
-- Dispersion mirror: [rd_dispersion_runner.py](Prometheus_FUVDM/fum_rt/physics/rd_dispersion_runner.py:1)
+- Front-speed mirror: [rd_front_speed_runner.py](fum_rt/physics/rd_front_speed_runner.py)  
+- Dispersion mirror: [rd_dispersion_runner.py](fum_rt/physics/rd_dispersion_runner.py)
 
 ## Design principles (condensed)
 
@@ -217,13 +217,13 @@ fum_rt parity (independent runners; same metrics schema)
 ## Memory steering and system notes
 
 - Memory-steering derivations and runtime integrations are tracked separately and must reference RD canonical terms when mapping to dynamics.  
-  See: [memory_steering.md](Prometheus_FUVDM/derivation/memory_steering/memory_steering.md:1)  
+  See: [memory_steering_acceptance_verification.md](derivation/memory_steering/memory_steering_acceptance_verification.md)  
 - Runtime parity and plots reside under fum_rt/core/* and fum_rt/physics/* with explicit comments when driven by proven physics
 
 ## Finite-domain EFT modes (quarantined)
 
 - Finite-tube mode problem and energy scans adapt the EFT branch with bounded potentials and mass-matrix positivity  
-- Doc: [finite_tube_mode_analysis.md](Prometheus_FUVDM/derivation/tachyon_condensation/finite_tube_mode_analysis.md:1)
+- Doc: [finite_tube_mode_analysis.md](derivation/tachyon_condensation/finite_tube_mode_analysis.md)
 
 ## Archive / informal content
 
@@ -236,9 +236,9 @@ fum_rt parity (independent runners; same metrics schema)
 
 ## Appendix: Quick Links
 
-- Front speed: [rd_front_speed_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_front_speed_validation.md:1),  
-  [rd_front_speed_experiment.py](Prometheus_FUVDM/derivation/code/physics/reaction_diffusion/rd_front_speed_experiment.py:1)  
-- Dispersion: [rd_dispersion_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_dispersion_validation.md:1),  
-  [rd_dispersion_experiment.py](Prometheus_FUVDM/derivation/code/physics/reaction_diffusion/rd_dispersion_experiment.py:1)  
-- Plan: [rd_validation_plan.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_validation_plan.md:1)  
-- Status: [CORRECTIONS.md](Prometheus_FUVDM/derivation/CORRECTIONS.md:1)
+- Front speed: [rd_front_speed_validation.md](derivation/reaction_diffusion/rd_front_speed_validation.md),  
+  [rd_front_speed_experiment.py](derivation/code/physics/reaction_diffusion/rd_front_speed_experiment.py)  
+- Dispersion: [rd_dispersion_validation.md](derivation/reaction_diffusion/rd_dispersion_validation.md),  
+  [rd_dispersion_experiment.py](derivation/code/physics/reaction_diffusion/rd_dispersion_experiment.py)  
+- Plan: [rd_validation_plan.md](derivation/reaction_diffusion/rd_validation_plan.md)  
+- Status: [CORRECTIONS.md](CORRECTIONS.md)

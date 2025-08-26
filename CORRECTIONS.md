@@ -6,7 +6,7 @@ Scope: Tier-0 correctness fixes (numerics, stability narrative) and unification 
 
 ## Summary (before → after)
 
-- [derivation/FUVDM_Overview.md](FUVDM_Overview.md)
+- [FUVDM_Overview.md](FUVDM_Overview.md)
   - Before: Mixed RD/EFT claims; no explicit canonical model.
   - After: Canonical RD banner + mapping (D = J a² or (J/z) a²; r = α − β; u = α), stability note, EFT scoped to future work.
 
@@ -14,11 +14,11 @@ Scope: Tier-0 correctness fixes (numerics, stability narrative) and unification 
   - Before: Fixed numerical claim “m_eff ≈ 0.387”.
   - After: m_eff = √(α−β) (parameter‑dependent), added RD model‑class note; removed fixed numeric.
 
-- [derivation/discrete_to_continuum.md](discrete_to_continuum.md)
+- [discrete_to_continuum.md](derivation/foundations/discrete_to_continuum.md)
   - Before: Objective stated convergence to KG; D mapping not explicit.
   - After: Objective states RD mapping as primary; explicit D mapping (D = J a² or (J/z) a²); EFT derivation quarantined to EFT doc.
 
-- [derivation/memory_steering.md](memory_steering.md)
+- [memory_steering_acceptance_verification.md](derivation/memory_steering/memory_steering_acceptance_verification.md)
   - Before: Hardwired EFT vacuum/mass invariants in main text.
   - After: RD is canonical; EFT invariants referenced only to EFT doc; removed back‑solving (α,β) from (v,m_eff) in RD narrative.
 

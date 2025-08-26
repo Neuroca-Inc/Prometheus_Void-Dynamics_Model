@@ -16,20 +16,20 @@ This folder provides a public, paper‑only view of the Void Dynamics program. I
 
 ## What’s inside (papers)
 - Program overview and banner:
-  - [FUVDM_Overview.md](Prometheus_FUVDM/derivation/FUVDM_Overview.md:1)
+  - [FUVDM_Overview.md](FUVDM_Overview.md)
 - Foundations:
-  - [discrete_to_continuum.md](Prometheus_FUVDM/derivation/foundations/discrete_to_continuum.md:1)
-  - [continuum_stack.md](Prometheus_FUVDM/derivation/foundations/continuum_stack.md:1)
+  - [discrete_to_continuum.md](derivation/foundations/discrete_to_continuum.md)
+  - [continuum_stack.md](derivation/foundations/continuum_stack.md)
 - Reaction–Diffusion (canonical baseline):
-  - [rd_front_speed_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_front_speed_validation.md:1)
-  - [rd_dispersion_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_dispersion_validation.md:1)
-  - [rd_validation_plan.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_validation_plan.md:1)
+  - [rd_front_speed_validation.md](derivation/reaction_diffusion/rd_front_speed_validation.md)
+  - [rd_dispersion_validation.md](derivation/reaction_diffusion/rd_dispersion_validation.md)
+  - [rd_validation_plan.md](derivation/reaction_diffusion/rd_validation_plan.md)
 - Memory Steering (slow routing bias; separate layer):
-  - [memory_steering.md](Prometheus_FUVDM/derivation/memory_steering/memory_steering.md:1)
+  - [memory_steering_acceptance_verification.md](derivation/memory_steering/memory_steering_acceptance_verification.md)
 - Finite‑domain EFT modes (quarantined future work):
-  - [finite_tube_mode_analysis.md](Prometheus_FUVDM/derivation/tachyon_condensation/finite_tube_mode_analysis.md:1)
+  - [finite_tube_mode_analysis.md](derivation/tachyon_condensation/finite_tube_mode_analysis.md)
 - Change log / scoping notes:
-  - [CORRECTIONS.md](Prometheus_FUVDM/derivation/CORRECTIONS.md:1)
+  - [CORRECTIONS.md](CORRECTIONS.md)
 
 ## What’s not included
 - Source code, executables, or private runtime harnesses.
@@ -49,9 +49,9 @@ This folder provides a public, paper‑only view of the Void Dynamics program. I
 
 ## Citations
 - When referencing specific results, cite the overview and the relevant validation paper, for example:
-  - [FUVDM_Overview.md](Prometheus_FUVDM/derivation/FUVDM_Overview.md:1)
-  - [rd_front_speed_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_front_speed_validation.md:1)
-  - [rd_dispersion_validation.md](Prometheus_FUVDM/derivation/reaction_diffusion/rd_dispersion_validation.md:1)
+  - [FUVDM_Overview.md](FUVDM_Overview.md)
+  - [rd_front_speed_validation.md](derivation/reaction_diffusion/rd_front_speed_validation.md)
+  - [rd_dispersion_validation.md](derivation/reaction_diffusion/rd_dispersion_validation.md)
 
 ## Contact
 - For scope questions or clarifications about acceptance criteria, refer to the headers in the overview and topic files listed above. If you are reading this as part of a paper‑only bundle, the maintainer’s contact is provided alongside the distribution materials.
