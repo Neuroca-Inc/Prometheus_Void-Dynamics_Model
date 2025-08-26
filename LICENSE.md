@@ -132,7 +132,7 @@ Violations constitute intellectual property infringement and may result in legal
 
 ---
 
-**Last Updated**: July 31, 2025
+**Last Updated**: Aug 8, 2025
 **License Version**: 2.0 - Dual Academic/Commercial
 
 ---
