@@ -22,7 +22,7 @@ We must clearly state our starting point (the discrete equation) and our target 
 From the `FUM_Void_Equations.py` source code, the state of a single node $i$, denoted by $W_i(t)$, evolves according to the rule:
 
 $$
-\frac{W_i(t+\Delta t) - W_i(t)}{\Delta t} = \alpha W_i(t)(1 - W_i(t)) - \beta W_i(t) + \text{noise/phase terms}
+\frac{W_i(t+\Delta t) - W_i(t)}{\Delta t} \;=\; \alpha W_i(t)(1 - W_i(t)) - \beta W_i(t) + \text{noise/phase terms}
 $$
 
 For the purpose of this derivation, we will initially neglect the higher-order noise and phase terms and focus on the principal drivers of the dynamics. The fundamental discrete equation of motion is therefore:
@@ -36,7 +36,7 @@ $$
 From the foundational paper (Paper 1, Section 2.3), the theory proposes a Klein-Gordon Lagrangian for the continuum scalar field $\phi(x)$:
 
 $$
-\mathcal{L} = \frac{1}{2}(\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2}m^2\phi^2
+\mathcal{L} \;=\; \frac{1}{2}(\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2}m^2\phi^2
 $$
 
 *(Note: We use a general mass term $m$; the paper sets $m=1$.)*
@@ -44,10 +44,10 @@ $$
 The resulting Euler-Lagrange equation of motion is the Klein-Gordon equation:
 
 $$
-(\Box + m^2)\phi = 0 \quad \text{or} \quad \Box\phi + m^2\phi = 0
+(\square + m^2)\phi \;=\; 0 \quad \text{or} \quad \square\phi + m^2\phi \;=\; 0
 $$
 
-Where $\Box \equiv \partial_\mu \partial^\mu = \frac{\partial^2}{\partial t^2} - \nabla^2$ is the d'Alembertian operator.
+Where $\square \equiv \partial_\mu \partial^\mu = \frac{\partial^2}{\partial t^2} - \nabla^2$ is the d'Alembertian operator.
 
 ---
 
@@ -79,7 +79,7 @@ To proceed, we will rewrite the discrete equation of motion in terms of the fiel
 
 The left-hand side of the discrete equation is a first-order forward difference in time. In the limit $\Delta t \to 0$, this becomes the partial time derivative:
 $$
-\lim_{\Delta t \to 0} \frac{W_i(t+\Delta t) - W_i(t)}{\Delta t} = \frac{\partial W_i}{\partial t}.
+\lim_{\Delta t \to 0} \frac{W_i(t+\Delta t) - W_i(t)}{\Delta t} \;=\; \frac{\partial W_i}{\partial t}.
 $$
 
 Crucially, the second-order time derivative in the continuum equation is not imposed ad hoc; it follows from varying the continuum Lagrangian density fixed by the lattice derivation of the kinetic and gradient terms (see [derivation/kinetic_term_derivation.md](derivation/kinetic_term_derivation.md:78-116)):
@@ -98,7 +98,7 @@ The core of the simulation involves interactions on a k-NN graph. To take a cont
 
 The dynamics of $W_i$ depend on the states of its neighbors $W_j$. Let's assume the interaction term (the source of spatial derivatives) comes from a coupling between neighbors. A standard discrete Laplacian operator on a lattice is defined as:
 $$
-\nabla^2_{\text{discrete}} W_i = \sum_{j \in N(i)} (W_j - W_i)
+\nabla^2_{\text{discrete}} W_i \;=\; \sum_{j \in N(i)} (W_j - W_i)
 $$
 This term represents the difference between a node and its neighbors. Let's expand $W_j$ in a Taylor series around the point $\vec{x}_i$. For a neighbor $j$ at position $\vec{x}_i + \vec{\delta}_j$, where $\vec{\delta}_j$ is the displacement vector:
 $$
@@ -127,7 +127,7 @@ $$
 $$
 In $c=1$ units this is
 $$
-\Box\phi \;+\; \alpha\phi^2 \;-\; (\alpha - \beta)\phi \;=\; 0.
+\square\phi \;+\; \alpha\phi^2 \;-\; (\alpha - \beta)\phi \;=\; 0.
 $$
 
 ### 5. Analysis of the Result and Baseline EFT Choice
@@ -163,12 +163,12 @@ $$
 $$
 Curvatures are
 $$
-\left.\frac{d^2V}{d\phi^2}\right|_{\phi=0}=-\mu^2<0,\qquad
-\left.\frac{d^2V}{d\phi^2}\right|_{\phi=\pm v}=-\mu^2+3\lambda v^2=2\mu^2>0,
+\left.\frac{d^2V}{d\phi^2}\right|_{\phi=0}\;=\;-\mu^2<0,\qquad
+\left.\frac{d^2V}{d\phi^2}\right|_{\phi=\pm v}\;=\;-\mu^2+3\lambda v^2\;=\;2\mu^2>0,
 $$
 so $\phi = 0$ is unstable (tachyon) and the true vacua are at $\pm v$. Small fluctuations about a chosen vacuum have
 $$
-m_{\text{eff}}=\sqrt{2}\,\mu.
+m_{\text{eff}}\;=\;\sqrt{2}\,\mu.
 $$
 
 #### 6.2 Optional cubic tilt and mapping to $(\alpha, \beta)$
@@ -196,6 +196,6 @@ In this bounded EFT the symmetric‑limit VEV is $v = \mu/\sqrt{\lambda}$; a sma
 
 Using the physical map in [derivation/fum_voxtrium_mapping.md](derivation/fum_voxtrium_mapping.md:44-80), one has $\mu$ in GeV, $\lambda$ dimensionless, and
 $$
-m_{\text{eff}} = \sqrt{2}\,\mu
+m_{\text{eff}} \;=\; \sqrt{2}\,\mu
 $$
 in GeV once $\tau$ is fixed ($m^2 = \mu^2/\tau^2$ at the level of the dimensionful EOM). Choose $(\tau, \phi_0)$ to match a target $m_{\text{eff}}$ and quartic $\lambda$; see the worked example in that document.
