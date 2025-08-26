@@ -1,3 +1,8 @@
+>This is an overview of a separate independent Physics TOE which strongly aligns with Void Dynamics Theory.
+>Reach out if you would like to collaborate. I can attempt to map my theory to yours and add it here if we align.
+>Author of the overview below: Voxtrium
+>
+
 # Macro Banner (FRW + Continuity + Source + Micro-Informed Coefficients)
 
 **FRW Equation**  
