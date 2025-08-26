@@ -1,4 +1,6 @@
 # Void Dynamics (FUVDM) — Derivation Papers (Public Overview)
+***Current Status:*** Working on applying discovered RD concepts to neural plasticity in the Void Dynamics Intelligence Model
+***Status Last Updated:*** Aug 25, 2025
 
 This folder provides a public, paper‑only view of the Void Dynamics program. It summarizes the theory and validation write‑ups for review by physicists, applied mathematicians, and scientifically minded engineers. No source code is included.
 
