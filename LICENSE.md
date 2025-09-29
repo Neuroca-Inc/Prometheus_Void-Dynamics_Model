@@ -1,5 +1,5 @@
 # Proprietary Research License
-***Last Updated: August 8th, 2025***
+***Last Updated: September 29th, 2025***
 
 # Dual Research and Commercial License
 
@@ -73,7 +73,7 @@ This repository is available under two distinct licensing tracks:
 
 ### Commercial Applications Include:
 - Product development and commercialization
-- Research with intent to 
+- Research with intent to commercialize
 - Paid consulting or services
 - Integration into commercial software/hardware
 - Technology licensing to other commercial entities
@@ -95,7 +95,7 @@ This work contains multiple distinct, patentable inventions and processes:
 5. **Multi-Phase Training Strategies**: Homeostatic-gated curriculum learning methodologies via temporally graduated raw stimuli streaming
 6. **Hierarchical TDA Analysis**: Novel application of accurate real time topological data analysis to knowledge graph assessment
 7. **Evolving Neuron Models**: Dynamic self modulating neuron architectures with adaptive intrinsic plasticity
-8. **Mathematical Formulations**: Certain previously undocumented equations, parameter combinations, and empirical discoveries
+8. **Mathematical Formulations**: Certain previously undocumented equations, parameter combinations, and empirical discoveries leveraging the category of Void Dynamics defined and described throughout this repository.
 
 ### Implementation vs. Process Protection
 
