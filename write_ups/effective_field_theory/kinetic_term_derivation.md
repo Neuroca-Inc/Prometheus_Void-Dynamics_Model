@@ -1,203 +1,134 @@
-# Derivation of the VDM Kinetic Term
+# Derivation of the FUM Kinetic Term
 
->
-> Author: Justin K. Lietz<br>
-> ORCID: [0009-0008-9028-1366](https://orcid.org/0009-0008-9028-1366)<br>
-> Contact: <justin@neuroca.ai>
->
-> Created: August 9, 2025<br>
-> Updated: August 9, 2025
->
-> This research is protected under a dual-license to foster open academic
-> research while ensuring commercial applications are aligned with the project's ethical principles.
-> Commercial use requires written permission from the author..
->
-> See LICENSE file for full terms.
----
-
-## 1. Objective
-
-As outlined in our Effective Field Theory (EFT) roadmap, we must rigorously derive the coefficients of the general Lagrangian from the underlying discrete VDM simulation. Earlier work separated temporal and spatial (interaction) contributions.
-
-The objective of this document is to derive the kinetic prefactor (wave-function normalization) $Z(\phi)$ and show it is a constant, $Z(\phi)=\tfrac{1}{2}$, consistent with a canonical Klein-Gordon-type scalar field. We start from the discrete temporal “kinetic energy” and nearest-neighbor interaction, take the continuum limit, and match to the continuum Lagrangian density.
+**Author:** Justin K. Lietz  
+**Date:** August 8, 2025
 
 ---
 
-### 2. Temporal Kinetic Term
+### 1. Objective
 
-The temporal part of the kinetic term arises from the discrete “kinetic energy” (see `write_ups/conservation_law/discrete_conservation.md`):
+As outlined in our Effective Field Theory (EFT) roadmap, we must rigorously derive the coefficients of the general Lagrangian from the underlying discrete FUM simulation. Our previous work derived the leading-order potential term, `V(\phi)`. The next most dominant term is the kinetic term, `\mathcal{L}_K = Z(\phi)(\partial_\mu \phi)^2`.
 
+The objective of this proof is to formally derive the coefficient `Z(\phi)` and demonstrate that it is a constant (`Z(\phi) = 1/2`), as required for a standard Klein-Gordon field. We will analyze the temporal `(\partial_t \phi)^2` and spatial `(\nabla \phi)^2` components separately.
+
+---
+
+### 2. The Temporal Kinetic Term
+
+The temporal part of the kinetic term, which relates to the change of the field in time, arises from the "kinetic energy" term in our postulated discrete Hamiltonian.
+
+In `derivation/discrete_conservation.md`, we defined the kinetic energy at a node `i` as:
 $$
 \mathcal{K}_i = \frac{1}{2}\left(\frac{dW_i}{dt}\right)^2
 $$
+Here, `\frac{dW_i}{dt}` is the discrete difference `\frac{W_i(t+\Delta t) - W_i(t)}{\Delta t}`.
 
-with the discrete time derivative
-
+To find the contribution to the continuum Lagrangian density, we take the continuum limit (`W_i \to \phi(x)` and `\frac{dW_i}{dt} \to \frac{\partial \phi}{\partial t}`):
 $$
-\frac{dW_i}{dt} = \frac{W_i(t+\Delta t) - W_i(t)}{\Delta t}.
+\mathcal{L}_{\text{Kinetic, Temporal}} = \lim_{\text{continuum}} \mathcal{K}_i = \frac{1}{2}\left(\frac{\partial \phi}{\partial t}\right)^2
 $$
-
-Continuum limit $W_i \to \phi(\mathbf{x},t)$, $\frac{dW_i}{dt} \to \partial_t \phi$:
-
-$$
-\mathcal{L}_{\text{kinetic, temporal}} = \frac{1}{2}(\partial_t \phi)^2.
-$$
-
-So the coefficient of $(\partial_t \phi)^2$ is already $1/2$.
+This is a direct and encouraging result. It shows that the coefficient for the `(\partial_t \phi)^2` part of the kinetic term is indeed a constant, `1/2`.
 
 ---
 
-### 3. Spatial Kinetic (Gradient) Term
+### 3. The Spatial Kinetic Term
 
-The spatial contribution comes from the discrete interaction energy:
-
+The spatial part of the kinetic term arises from the **interaction energy** between neighboring nodes, which we defined in the discrete Hamiltonian as:
 $$
-\mathcal{I}i = \tfrac{1}{2} \sum{j \in N(i)} J \big(W_j - W_i\big)^2
+\mathcal{I}_i = \frac{1}{2} \sum_{j \in N(i)} J (W_j - W_i)^2
 $$
+This term penalizes differences in the state of adjacent nodes. Intuitively, a smooth field where neighbors have similar states has low energy, while a rapidly changing field has high energy. This "gradient energy" is the source of the spatial kinetic term `(\nabla \phi)^2`.
 
-This penalizes sharp spatial variations.
+**Next Step:**
 
-#### 3.1 Continuum Limit via Taylor Expansion
+Our task is now to take the continuum limit of this interaction term. We will do this by performing a Taylor series expansion on `W_j` around the position of node `i`, summing over all neighbors, and showing that the leading-order result is proportional to `(\nabla \phi)^2`.
 
-Approximate the local k-NN structure by a regular cubic lattice (spacing $a$, dimension $d=3$). Let site $i$ be at $\mathbf{x}$; neighbors lie at $\mathbf{x} \pm a \hat{e}_k$, $k\in\{x,y,z\}$.
+#### 3.1 The Continuum Limit of the Interaction Term
 
-Taylor expand:
+To perform the derivation, we will approximate the k-NN graph as a regular, 3-dimensional cubic lattice with lattice spacing `a`. A node `i` is at position `\vec{x}`, and its nearest neighbors `j` are at positions `\vec{x} \pm a\hat{k}` where `\hat{k}` is a unit vector in the `x, y,` or `z` direction.
 
+We expand the state `W_j` of a neighbor in a Taylor series around the position `\vec{x}`:
 $$
-W(\mathbf{x}+a\hat{e}_k) = W(\mathbf{x}) + a\,\partial_k W(\mathbf{x}) + \frac{a^2}{2}\partial_k^2 W(\mathbf{x}) + O(a^3).
+W_j = W(\vec{x} + a\hat{k}) \approx W(\vec{x}) + a (\hat{k} \cdot \nabla)W(\vec{x}) + \frac{a^2}{2}(\hat{k} \cdot \nabla)^2 W(\vec{x})
 $$
-
-Difference:
-
+The difference `(W_j - W_i)` is then:
 $$
-W(\mathbf{x}+a\hat{e}_k) - W(\mathbf{x}) = a\,\partial_k W + \frac{a^2}{2}\partial_k^2 W + O(a^3).
+(W_j - W_i) \approx a \frac{\partial W}{\partial k} + \frac{a^2}{2} \frac{\partial^2 W}{\partial k^2}
 $$
-
-Lowest non-vanishing order when squared:
-
+Squaring this and keeping only the lowest order term in `a` (which is `a^2`), we get:
 $$
-\big(W(\mathbf{x}+a\hat{e}_k) - W(\mathbf{x})\big)^2 = a^2 (\partial_k W)^2 + O(a^3).
+(W_j - W_i)^2 \approx a^2 \left( \frac{\partial W}{\partial k} \right)^2
 $$
-
-Similarly for the negative direction. Summing the 6 neighbors:
-
+Now, we sum this over all neighbors. For a cubic lattice, there are 6 neighbors (pairs in the `\pm x`, `\pm y`, `\pm z` directions). The sum is:
 $$
-\sum_{j \in N(i)} (W_j - W_i)^2 = 2 a^2 \sum_{k}( \partial_k W )^2 + O(a^3) = 2 a^2 (\nabla W)^2 + O(a^3).
+\sum_{j \in N(i)} (W_j - W_i)^2 \approx \sum_{k \in \{x,y,z\}} \left[ a^2\left(\frac{\partial W}{\partial k}\right)^2 + a^2\left(\frac{\partial W}{\partial (-k)}\right)^2 \right] = 2a^2 \sum_{k \in \{x,y,z\}} \left(\frac{\partial W}{\partial k}\right)^2
 $$
-
-Insert into interaction energy and pass to the field $\phi$:
-
+This sum is simply the squared norm of the gradient vector:
 $$
-\mathcal{I}_i \approx \frac{1}{2} J \left(2 a^2 (\nabla \phi)^2\right) = J a^2 (\nabla \phi)^2.
+\sum_{j \in N(i)} (W_j - W_i)^2 \approx 2a^2 (\nabla W)^2
 $$
-
-Thus the spatial gradient term appears with coefficient $J a^2$.
-
-#### 3.2 Variational Derivation from a Discrete Action
-
-Define:
-
-- Lattice spacing $a$, dimension $d$.
-- Time step $\Delta t$, times $t_n = n \Delta t$.
-- Field $W_i^n = W(\mathbf{x}_i, t_n)$.
-- Unit vectors $\hat{e}_\mu$, $\mu=1,\dots,d$.
-
-Discrete Lagrangian per time step:
-
+Substituting this back into the interaction energy expression and taking the continuum limit `W \to \phi`:
 $$
-L^n = a^d \sum_i \Bigg[ \frac{1}{2}\Big(\frac{W_i^{n+1}-W_i^{n}}{\Delta t}\Big)^2 - \frac{\kappa}{2} \sum_{\mu=1}^d \big(W_{i+\mu}^{n} - W_i^{n}\big)^2 - V(W_i^{n}) \Bigg]
+\mathcal{I} \approx \frac{1}{2} J (2a^2 (\nabla \phi)^2) = J a^2 (\nabla \phi)^2
 $$
-
-Discrete Euler-Lagrange:
-
-$$
-\frac{W_i^{n+1} - 2 W_i^{n} + W_i^{n-1}}{(\Delta t)^2} - \kappa \sum_{\mu=1}^d \big(W_{i+\mu}^{n} + W_{i-\mu}^{n} - 2 W_i^{n}\big) + V'(W_i^{n}) = 0
-$$
-
-Continuum expansion:
-
-$$
-W_{i+\mu} + W_{i-\mu} - 2 W_i = a^2 \partial_\mu^2 \phi + O(a^4),
-$$
-
-yields
-
-$$
-\partial_t^2 \phi - \kappa a^2 \nabla^2 \phi + V'(\phi) = 0,
-$$
-
-from
-
-$$
-\mathcal{L} = \frac{1}{2}(\partial_t \phi)^2 - \frac{\kappa a^2}{2} (\nabla \phi)^2 - V(\phi).
-$$
-
-Edge-counting conventions:
-
-- Per undirected edge counted once: coefficient $\kappa$, wave speed $c^2 = \kappa a^2$.
-- Per site with both $\pm\mu$ neighbors in a sum $\tfrac{1}{2}\sum_{j\in N(i)} J (W_j-W_i)^2$: $\kappa = 2J$, so $c^2 = 2 J a^2$.
+This is the Lagrangian density for the spatial part of the kinetic term.
 
 ---
 
-### 4. Full Kinetic Term
+### 3.2 Variational derivation from a discrete action (self‑contained)
 
-Combining temporal and spatial pieces (signature $+ - - -$):
+We now derive the second‑order dynamics directly from a discrete action, which subsumes both the temporal and spatial kinetic terms and fixes the normalization without assumptions.
 
+- Spatial lattice: cubic, spacing `a`, spatial dimension `d` (use `d=3` in practice)  
+- Time step: `Δt`; sites indexed by `i`, times by `n` with `t_n = n Δt`  
+- Site field: `W_i^n ≡ W(𝐱_i, t_n)`; neighbor directions `μ ∈ {1,…,d}` with unit vectors `ê_μ`
+
+Discrete Lagrangian (per time step):
 $$
-\mathcal{L}_{K} = \frac{1}{2}(\partial_t \phi)^2 - J a^2 (\nabla \phi)^2.
-$$
-
-Define
-
-$$
-c^2 \equiv 2 J a^2 \quad (\text{equivalently } c^2 = \kappa a^2).
-$$
-
-Then
-
-$$
-\mathcal{L}_{K} = \frac{1}{2}(\partial_t \phi)^2 - \frac{c^2}{2}(\nabla \phi)^2,
+L^n \;=\; a^d \sum_i\Bigg[
+\frac{1}{2}\Big(\frac{W_i^{\,n+1}-W_i^{\,n}}{\Delta t}\Big)^2
+\;-\; \frac{\kappa}{2}\sum_{\mu=1}^d\big(W_{i+\mu}^{\,n}-W_i^{\,n}\big)^2
+\;-\; V\!\big(W_i^{\,n}\big)
+\Bigg].
 $$
 
-and the Euler-Lagrange equation (with potential) is
-
+Discrete Euler-Lagrange (central in time):
 $$
-\partial_t^2 \phi - c^2 \nabla^2 \phi + V'(\phi) = 0.
-$$
-
-One may set $c=1$ by a units rescaling; this does not alter $Z(\phi)$.
-
----
-
-### 5. Conclusion
-
-We have
-
-$$
-\mathcal{L}_{K} = \frac{1}{2}(\partial_t \phi)^2 - J a^2 (\nabla \phi)^2
-= \frac{1}{2}(\partial_t \phi)^2 - \frac{c^2}{2}(\nabla \phi)^2,
-\qquad c^2 = 2 J a^2.
+\frac{W_i^{\,n+1}-2W_i^{\,n}+W_i^{\,n-1}}{(\Delta t)^2}
+\;-\;\kappa\,\sum_{\mu=1}^d \big(W_{i+\mu}^{\,n}+W_{i-\mu}^{\,n}-2W_i^{\,n}\big)
+\;+\;V'\!\big(W_i^{\,n}\big)=0.
 $$
 
-Thus the kinetic normalization is constant: $Z(\phi)=\tfrac{1}{2}$. No field-dependent prefactor emerges from the discrete nearest-neighbor quadratic form.
+Continuum limit (`W_i^n \approx \phi(\mathbf{x}_i,t_n)`, `Δt→0`, `a→0`), using
+`W_{i+\mu}+W_{i-\mu}-2W_i = a^2 ∂_\mu^2 \phi + O(a^4)`:
+$$
+\partial_t^2\phi \;-\; \kappa a^2 \nabla^2\phi \;+\; V'(\phi)=0,
+$$
+which follows from the continuum Lagrangian density
+$$
+\mathcal{L} \;=\; \frac{1}{2}(\partial_t\phi)^2 \;-\; \frac{\kappa a^2}{2}(\nabla\phi)^2 \;-\; V(\phi).
+$$
 
----
+Edge‑counting conventions:
+- Per‑edge coupling `κ` (each undirected edge counted once) gives `c^2 = κ a^2`.
+- Per‑site coupling with both `±μ` neighbors, `\frac{1}{2}\sum_{j\in N(i)} J (W_j-W_i)^2`, corresponds to `κ = 2J`, hence `c^2 = 2 J a^2`.
 
-### 6. Conventions Summary
+This variational derivation replaces any need to “promote to second order” by hand and makes the normalization and propagation speed explicit.
+### 4. Assembling the Full Kinetic Term and Conclusion
 
-- Per-site coupling form (both directions): $c^2 = 2 J a^2$.
-- Per-edge single count: $c^2 = \kappa a^2$ with $\kappa = 2J$.
-- Canonical relativistic form follows by choosing $c=1$.
+We can now assemble the full kinetic Lagrangian density, `\mathcal{L}_K = \mathcal{L}_{\text{Kinetic, Temporal}} - \mathcal{L}_{\text{Kinetic, Spatial}}`. The minus sign is required for the signature of the Minkowski metric (`+---`).
 
----
+$$
+\mathcal{L}_K = \frac{1}{2}\left(\frac{\partial \phi}{\partial t}\right)^2 - J a^2 (\nabla \phi)^2
+$$
+Equivalently, compare to the standard relativistic form `\frac{1}{2}(\partial_\mu \phi)^2 = \frac{1}{2}\left( (\frac{\partial \phi}{\partial t})^2 - (\nabla \phi)^2 \right)` by defining the propagation speed
+$$
+c^2 \equiv 2\,J\,a^2,
+$$
+so the Euler-Lagrange equation carries `\partial_t^2\phi - c^2 \nabla^2 \phi + V'(\phi)=0`. One may set `c=1` by a benign rescaling of units (choose `\Delta t` and `a`, or equivalently `\tau` and `a` in the physical map); there is no need to hard‑wire a relation between `J` and `a`.
 
-### 7. Possible Extensions
+Note on edge‑counting conventions: if instead you count undirected edges once via a per‑edge coupling `\kappa`, the spatial term is `( \kappa / 2 ) \sum_\mu (W_{i+\mu}-W_i)^2` and the continuum prefactor is `\kappa a^2`; identifying `\kappa = 2J` gives `c^2=\kappa a^2 = 2 J a^2`.
+**Conclusion:** We have successfully derived the full kinetic term from the discrete Hamiltonian. The derivation confirms that the kinetic term coefficient, `Z(\phi)`, is a constant and not a function of the field `\phi`. This is a successful and crucial step in formalizing the FUM.
 
-- Anisotropy: $c_k^2 = 2 J_k a_k^2$.
-- Higher-order lattice corrections: keep $O(a^4)$ to estimate discretization error.
-- Longer-range couplings: induce higher derivative operators (e.g. $(\nabla^2 \phi)^2$) in an EFT expansion.
-- Field-dependent couplings $J(\phi)$: would generate non-constant $Z(\phi)$.
-
----
-
-End of document.
+**Note.** There is no microscopic constraint tying `J` to `a`. The continuum limit yields
+`𝓛_K = ½(∂_t φ)^2 - J a^2 (∇φ)^2` and the wave speed `c^2 = 2 J a^2` (or `c^2 = κ a^2` with `κ = 2J`). One may set `c = 1` by a benign rescaling of time/length units (choose `Δt` and `a`, or equivalently `τ` and `a` in the physical map); this is a units choice, not a constraint.

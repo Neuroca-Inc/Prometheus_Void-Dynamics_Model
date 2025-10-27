@@ -1,16 +1,12 @@
 ﻿# Fluids Limit (Reduction to Navier€“Stokes)
 
 >
-> Author: Justin K. Lietz<br>
-> ORCID: [0009-0008-9028-1366](https://orcid.org/0009-0008-9028-1366)<br>
-> Contact: <justin@neuroca.ai>
->
-> Created: August 9, 2025<br>
-> Updated: August 9, 2025
+> Author: Justin K. Lietz  
+> Date: August 9, 2025
 >
 > This research is protected under a dual-license to foster open academic
-> research while ensuring commercial applications are aligned with the project's ethical principles.
-> Commercial use requires written permission from the author..
+> research while ensuring commercial applications are aligned with the project's ethical principles.<br>
+> Commercial use requires written permission from Justin K. Lietz.
 >
 > See LICENSE file for full terms.
 
@@ -42,7 +38,7 @@ with lattice sound speed c_s fixed by {c_i, w_i} (D2Q9: c_s^2 = 1/3).
 
 Implementation plan
 
-- Module: [lbm2d.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/fluids/lbm2d.py:1)
+- Module: [lbm2d.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/fluids/lbm2d.py:1)
 - Supports: periodic boundaries, bounce€‘back no€‘slip walls, simple forcing hook, viscosity Δ½ = c_s^2(ρ„ ˆ’ 1/2).
 
 ### I.2 Chapman€“Enskog expansion (sketch)
@@ -61,10 +57,10 @@ Conclusion
 
 ### I.3 Embedding in this repository
 
-- New module: [lbm2d.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/fluids/lbm2d.py:1) (D2Q9 BGK).
+- New module: [lbm2d.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/fluids/lbm2d.py:1) (D2Q9 BGK).
 - Benchmarks using shared logging/figure style:
-  - Taylor€“Green vortex: [taylor_green_benchmark.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/taylor_green_benchmark.py:1)
-  - Lid€‘driven cavity: [lid_cavity_benchmark.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/lid_cavity_benchmark.py:1)
+  - Taylor€“Green vortex: [taylor_green_benchmark.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/taylor_green_benchmark.py:1)
+  - Lid€‘driven cavity: [lid_cavity_benchmark.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/lid_cavity_benchmark.py:1)
 - Acceptance thresholds: see [BENCHMARKS_FLUIDS.md](Prometheus_VDM/BENCHMARKS_FLUIDS.md:1).
 
 ---
@@ -78,7 +74,7 @@ Introduce mass density ρ(x, t), momentum g = ρ v (and energy/entropy if th
 - Galilean invariance; spatial isotropy; frame objectivity.
 - Local balances:
   ˆ‚_t ρ + ˆ‡·(ρ v) = 0,
-  ˆ‚_t g + ˆ‡·(g Š— v) = ˆ’ˆ‡p + ˆ‡·ρ„ + ρ f.
+  ˆ‚_t g + ˆ‡·(g Š- v) = ˆ’ˆ‡p + ˆ‡·ρ„ + ρ f.
 
 ### II.2 Constitutive closure (gradient expansion)
 
@@ -130,14 +126,14 @@ Details in [BENCHMARKS_FLUIDS.md](Prometheus_VDM/BENCHMARKS_FLUIDS.md:1).
 ## Deliverables and Paths (for implementation)
 
 - Derivation: this file.
-- Module: [lbm2d.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/fluids/lbm2d.py:1) (D2Q9 BGK).
+- Module: [lbm2d.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/fluids/lbm2d.py:1) (D2Q9 BGK).
 - Benchmarks:
-  - [taylor_green_benchmark.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/taylor_green_benchmark.py:1)
-  - [lid_cavity_benchmark.py](Prometheus_VDM/write_ups/code/physics/fluid_dynamics/lid_cavity_benchmark.py:1)
+  - [taylor_green_benchmark.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/taylor_green_benchmark.py:1)
+  - [lid_cavity_benchmark.py](Prometheus_VDM/derivation/code/physics/fluid_dynamics/lid_cavity_benchmark.py:1)
 - Acceptance: [BENCHMARKS_FLUIDS.md](Prometheus_VDM/BENCHMARKS_FLUIDS.md:1)
 - Outputs:
-  - Figures †’ write_ups/code/outputs/figures/fluid_dynamics/
-  - Logs †’ write_ups/code/outputs/logs/fluid_dynamics/
+  - Figures †’ derivation/code/outputs/figures/fluid_dynamics/
+  - Logs †’ derivation/code/outputs/logs/fluid_dynamics/
   - JSON includes metrics and passed boolean.
 
 Notes

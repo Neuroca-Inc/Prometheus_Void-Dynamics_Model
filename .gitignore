@@ -227,3 +227,8 @@ __marimo__/
 # Secrets
 secrets/*
 
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
+memory-bank/

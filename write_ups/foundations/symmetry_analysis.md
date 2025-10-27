@@ -1,31 +1,21 @@
-# Symmetry Analysis of the VDM Dynamical Law
+# Symmetry Analysis of the FUM Dynamical Law
 
->
-> Author: Justin K. Lietz<br>
-> ORCID: [0009-0008-9028-1366](https://orcid.org/0009-0008-9028-1366)<br>
-> Contact: <justin@neuroca.ai>
->
-> Created: August 8, 2025<br>
-> Updated: August 8, 2025
->
-> This research is protected under a dual-license to foster open academic
-> research while ensuring commercial applications are aligned with the project's ethical principles.
-> Commercial use requires written permission from the author..
->
-> See LICENSE file for full terms.
----
-
-## 1. Objective
-
-Following our discovery that the standard Hamiltonian is not conserved, we now pivot to a more fundamental method for finding the true conserved quantity of the VDM: the search for symmetries.
-
-According to Noether's Theorem, for every continuous symmetry of a system's equations of motion, there exists a corresponding conserved quantity. The objective of this document is to systematically test the VDM's fundamental update rule for symmetries.
+**Author:** Justin K. Lietz  
+**Date:** August 8, 2025
 
 ---
 
-## 2. The Dynamical Law
+### 1. Objective
 
-The object of our study is the simplified, on-site VDM update rule, which we treat as the system's fundamental law of motion:
+Following our discovery that the standard Hamiltonian is not conserved, we now pivot to a more fundamental method for finding the true conserved quantity of the FUM: the search for symmetries.
+
+According to Noether's Theorem, for every continuous symmetry of a system's equations of motion, there exists a corresponding conserved quantity. The objective of this document is to systematically test the FUM's fundamental update rule for symmetries.
+
+---
+
+### 2. The Dynamical Law
+
+The object of our study is the simplified, on-site FUM update rule, which we treat as the system's fundamental law of motion:
 $$
 \frac{\Delta W}{\Delta t} = F(W) = (\alpha - \beta)W - \alpha W^2
 $$
@@ -62,13 +52,12 @@ F(W+c) = F(W) + (\alpha - \beta - 2\alpha W)c - \alpha c^2
 $$
 
 **Result:**
-Since `F(W+c) \neq F(W)`, the VDM dynamical law is **not** symmetric under a constant translation `W \to W+c`.
+Since `F(W+c) \neq F(W)`, the FUM dynamical law is **not** symmetric under a constant translation `W \to W+c`.
 
 **Interpretation:**
 This is expected: the dynamics depend on the absolute value of `W`. Context separation:
-
 - RD (canonical): for r>0, `W=0` is dynamically unstable and the stable homogeneous fixed point is `W* = r/u`.
-- EFT (future-work context): the vacuum is `v = 1 − β/α` (e.g., 0.6 for α=0.25, β=0.10).
+- EFT (future-work context): the vacuum is `v = 1 - β/α` (e.g., 0.6 for α=0.25, β=0.10).
 Avoid mixing RD fixed points with EFT vacua.
 
 ---
@@ -105,16 +94,16 @@ $$
 This is only true if `\lambda = \lambda^2`, which has solutions `\lambda=1` (the trivial case of no scaling) and `\lambda=0` (the trivial case of killing the field). It is not true for any non-trivial rescaling.
 
 **Result:**
-The VDM dynamical law is **not** symmetric under a scaling transformation `W \to \lambda W`.
+The FUM dynamical law is **not** symmetric under a scaling transformation `W \to \lambda W`.
 
 **Interpretation:**
-The lack of scaling symmetry is a direct consequence of the non-linear `\alpha W^2` term. This term introduces an intrinsic scale into the system's dynamics. The resistive force it represents does not scale linearly with the field value `W`. This confirms that the physics of the VDM is fundamentally different at different levels of void activity `W`, which is consistent with the model's principles.
+The lack of scaling symmetry is a direct consequence of the non-linear `\alpha W^2` term. This term introduces an intrinsic scale into the system's dynamics. The resistive force it represents does not scale linearly with the field value `W`. This confirms that the physics of the FUM is fundamentally different at different levels of void activity `W`, which is consistent with the model's core principles.
 
 ---
 
 ### 6. Conclusion and Next Steps
 
-Our analysis has shown that the VDM dynamical law does not possess the simplest and most common continuous symmetries (translation and scaling). This is a significant result. It strongly suggests that if a conserved quantity exists, it must arise from a more complex, non-obvious symmetry of the equations.
+Our analysis has shown that the FUM dynamical law does not possess the simplest and most common continuous symmetries (translation and scaling). This is a significant result. It strongly suggests that if a conserved quantity exists, it must arise from a more complex, non-obvious symmetry of the equations.
 
 The path to discovering such a symmetry is a more advanced research topic. The alternative path, as identified in our previous work, is to pivot from searching for a symmetry to analyzing the system's **Lyapunov function**, which can also reveal information about stability and conserved properties in dissipative systems.
 
@@ -153,10 +142,10 @@ $$
 $$
 
 **Result:**
-We have discovered the true conserved quantity for the on-site VDM dynamics. The constant of motion, `Q_{VDM}`, is:
+We have discovered the true conserved quantity for the on-site FUM dynamics. The constant of motion, `Q_{FUM}`, is:
 $$
-Q_{VDM} = t - \frac{1}{\alpha-\beta} \ln\left|\frac{W(t)}{(\alpha-\beta) - \alpha W(t)}\right|
+Q_{FUM} = t - \frac{1}{\alpha-\beta} \ln\left|\frac{W(t)}{(\alpha-\beta) - \alpha W(t)}\right|
 $$
 
 **Interpretation:**
-This is a profound result. We have found the hidden conservation law that governs the VDM. It is not a simple energy, but a highly non-trivial logarithmic relationship between the system's state `W` and the time `t`. This mathematical invariant proves that the evolution of a VDM node is not chaotic but follows a precise, predictable trajectory determined by its initial conditions. This resolves the theoretical critique regarding the lack of a conservation law.
+This is a profound result. We have found the hidden conservation law that governs the FUM. It is not a simple energy, but a highly non-trivial logarithmic relationship between the system's state `W` and the time `t`. This mathematical invariant proves that the evolution of a FUM node is not chaotic but follows a precise, predictable trajectory determined by its initial conditions. This resolves the core theoretical critique regarding the lack of a conservation law.

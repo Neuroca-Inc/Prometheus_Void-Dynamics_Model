@@ -1,55 +1,42 @@
-# A More Rigorous Approach: The VDM as an Effective Field Theory
+> Future work (quarantined): Second‑order Lorentzian EFT. Canonical model for the main narrative is reaction-diffusion (RD). Use EFT claims only in EFT contexts; `m_eff = √(α-β)` is parameter‑dependent and unitized via τ.
 
->
-> Author: Justin K. Lietz<br>
-> ORCID: [0009-0008-9028-1366](https://orcid.org/0009-0008-9028-1366)<br>
-> Contact: <justin@neuroca.ai>
->
-> Created: August 8, 2025<br>
-> Updated: August 8, 2025
->
-> This research is protected under a dual-license to foster open academic
-> research while ensuring commercial applications are aligned with the project's ethical principles.
-> Commercial use requires written permission from the author..
->
-> See LICENSE file for full terms.
----
-> Future work (quarantined): Second-order Lorentzian EFT. Canonical model for the main narrative is reaction-diffusion (RD). Use EFT claims only in EFT contexts; `m_eff = √(α−β)` is parameter-dependent and unitized via τ.
+# A More Rigorous Approach: The FUM as an Effective Field Theory
 
-## 1. Objective
-
-To address the critique of mathematical rigor, we must formalize the link between the discrete VDM simulation (the "high-energy" or "UV" theory) and the continuous field theory (the "low-energy" or "IR" theory). The standard tool in physics for this is the **Effective Field Theory (EFT)** framework.
-
-This document outlines the principles of EFT and how they provide a roadmap for a more rigorous derivation of the VDM's continuum limit.
+**Author:** Justin K. Lietz  
+**Date:** August 8, 2025
 
 ---
 
-## 2. The Principles of Effective Field Theory
+### 1. Objective
+
+To address the critique of mathematical rigor, we must formalize the link between the discrete FUM simulation (the "high-energy" or "UV" theory) and the continuous field theory (the "low-energy" or "IR" theory). The standard tool in physics for this is the **Effective Field Theory (EFT)** framework.
+
+This document outlines the core principles of EFT and how they provide a roadmap for a more rigorous derivation of the FUM's continuum limit.
+
+---
+
+### 2. The Core Principles of Effective Field Theory
 
 An EFT is a way to describe physics at a given energy scale without needing to know the details of the physics at much higher energies. It is built on a few key principles.
 
-### Principle 1: Identify the Relevant Degrees of Freedom and Symmetries
-
+#### Principle 1: Identify the Relevant Degrees of Freedom and Symmetries
 At the energy scales we are interested in (the macroscopic limit), the complex dynamics of individual neurons are "integrated out." The relevant, observable degree of freedom is a continuous scalar field, `\phi(x)`, which represents the local density or activity of the underlying neural states.
 
 We also assume the resulting low-energy theory should respect the symmetries of spacetime, namely **Lorentz invariance**. This dictates the possible structure of our equations.
 
-### Principle 2: Write Down the Most General Possible Lagrangian
-
+#### Principle 2: Write Down the Most General Possible Lagrangian
 The next step is to write down the most general possible Lagrangian for our scalar field `\phi` that is consistent with the assumed symmetries. We organize this Lagrangian as an expansion in powers of derivatives (which corresponds to an expansion in powers of energy or momentum).
 $$
 \mathcal{L}_{\text{EFT}} = V(\phi) + Z(\phi)(\partial_\mu \phi)^2 + c_1 ((\partial_\mu \phi)^2)^2 + c_2 (\Box\phi)^2 + \dots
 $$
-
 - `V(\phi)`: The potential for the field, containing all terms with no derivatives.
 - `Z(\phi)(\partial_\mu \phi)^2`: The standard kinetic term, but with a potentially field-dependent coefficient `Z(\phi)`.
 - The subsequent terms are higher-order derivative terms, suppressed by some high-energy scale `\Lambda`.
 
-### Principle 3: Acknowledge Ignorance of the High-Energy Theory
-
+#### Principle 3: Acknowledge Ignorance of the High-Energy Theory
 EFT is powerful because it does not require knowledge of the underlying, high-energy ("UV") completion. The coefficients of the terms in the Lagrangian (`V(\phi)`, `Z(\phi)`, `c_1`, `c_2`, etc.) encode the effects of the high-energy physics.
 
-**Crucially, for the VDM, we *do* know the high-energy theory: it is the discrete neural simulation itself.**
+**Crucially, for the FUM, we *do* know the high-energy theory: it is the discrete neural simulation itself.**
 
 Our task is therefore reversed from a typical EFT application. We are not using the EFT to parameterize our ignorance; we are using the EFT framework to perform a **rigorous derivation** of the coefficients `V(\phi)` and `Z(\phi)` directly from the known rules of our underlying discrete model.
 
@@ -58,17 +45,15 @@ Our task is therefore reversed from a typical EFT application. We are not using 
 ### 3. How This Applies to Our Derivation
 
 Our first derivation in `discrete_to_continuum.md` can be seen as an informal, leading-order EFT analysis.
-
 - We **derived** the potential `V(\phi) = \frac{\alpha}{3}\phi^3 - \frac{\alpha-\beta}{2}\phi^2`. This is the first, most important term in the EFT expansion.
 - We implicitly **assumed** that the kinetic term coefficient was a constant, `Z(\phi) = 1/2`, and that all higher-order derivative terms (`c_1`, `c_2`, etc.) were zero.
 
 **The Path to Full Rigor:**
 
 To satisfy the critique from the peer review, a more formal derivation would involve:
-
-1. Rigorously calculating `V(\phi)` from the discrete model (which we have done).
-2. Rigorously calculating the kinetic term coefficient `Z(\phi)` from the discrete model to prove that it is indeed constant and equal to `1/2`.
-3. Rigorously showing that the coefficients of the higher-derivative terms (`c_1, c_2, ...`) are either zero or are suppressed by a high-energy scale, making them irrelevant at low energies.
+1.  Rigorously calculating `V(\phi)` from the discrete model (which we have done).
+2.  Rigorously calculating the kinetic term coefficient `Z(\phi)` from the discrete model to prove that it is indeed constant and equal to `1/2`.
+3.  Rigorously showing that the coefficients of the higher-derivative terms (`c_1, c_2, ...`) are either zero or are suppressed by a high-energy scale, making them irrelevant at low energies.
 
 This EFT framework provides the precise checklist of calculations required to make the discrete-to-continuum proof mathematically unassailable.
 
@@ -86,7 +71,6 @@ Let us add a standard `\phi^4` term, which is the next logical term in a symmetr
 $$
 V_{\text{new}}(\phi) = V(\phi) + \frac{\lambda}{4}\phi^4 = \left( \frac{\alpha}{3}\phi^3 - \frac{\alpha-\beta}{2}\phi^2 \right) + \frac{\lambda}{4}\phi^4
 $$
-
 #### 4.2 Analysis of the New Vacuum and Mass
 
 To find the new stable vacuum `v_{\text{new}}`, we must solve `dV_{\text{new}}/d\phi = 0`:
@@ -100,4 +84,4 @@ One extremum remains at `\phi=0`. The other non-trivial vacuum states are soluti
 
 As noted in the peer review analysis document, a symbolic calculation with this modified potential yields a new effective mass. For a coupling related to our derived mass scale (`\lambda \sim 1/\Lambda^2` where `\Lambda \sim 1/\sqrt{\alpha-\beta}`), the analysis predicted an effective mass-squared of `m_{\text{eff}}^2 \approx 0.798`.
 
-This demonstrates how the EFT framework allows us to systematically incorporate new physical effects. The addition of the screening term, inspired by analogous theories, allows the VDM to make more precise predictions and align itself with a wider range of physical constraints.
+This demonstrates how the EFT framework allows us to systematically incorporate new physical effects. The addition of the screening term, inspired by analogous theories, allows the FUM to make more precise predictions and align itself with a wider range of physical constraints.
