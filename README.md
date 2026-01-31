@@ -5,7 +5,7 @@
 > The **WORKING** directory for this project is located on my personal account and can be found here: [justinlietz93/Prometheus_VDM](https://github.com/justinlietz93/Prometheus_VDM)  
 > Applying physics discoveries to the VDM intelligence model
 
-***Status Last Updated:*** Nov 4, 2025
+***Status Last Updated:*** Jan 31, 2026
 
 > Author: Justin K. Lietz<br>
 <a href="https://orcid.org/0009-0008-9028-1366"><img src="https://img.shields.io/badge/ORCID-0009--0008--9028--1366-blue?" alt="ORCID: 0009-0008-9028-1366"></a> <br>
@@ -24,6 +24,10 @@
 
 ## 🔥News:
 
+- **January 31, 2026**
+  - I’m asserting temporal priority and reduction‑to‑practice for the core architectural principles now popularized by BDH: scale‑free/heavy‑tail sparse neural graphs, locally interacting neuron‑particles, Hebbian working memory/online plasticity, sparse activations, and attention‑like state routing.
+My work (AMN→FUM→VDM) was published and open‑sourced months earlier with auditable timestamps, quantitative measurements (e.g., heavy‑tail fits, Gini inequality), and cryptographic provenance manifests.
+I am not alleging copying — I’m requesting correct attribution and citation of prior art, and I’m making the evidence easy to verify.
 - **October 31, 2025**
   - Added a T8 grade proposal for a new Axiom candidate as [A8 - Lietz Infinity Conjecture](/write_ups/T8_A8_Lietz_Infinity_Conjecture.md) which provides an elegant hypothesis for how our universe evolved to be how it is from a beginning state to now. It includes the derived rules for how our universe would be structured at hierarchical scales to dissipate away the instabilities of void fluctuations.
 - **October 30, 2025**  
