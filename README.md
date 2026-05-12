@@ -2,7 +2,7 @@
 
 ***Current Status:*** 
 
-> The **WORKING** directory for this project is located on my personal account and can be found here: [justinlietz93/Prometheus_VDM](https://github.com/justinlietz93/Prometheus_VDM)  
+> This repository and the existing repository in Justin Lietz' perosnal accounta have been archived for provenance and migrated to this official organization. The new **WORKING** directory for this project is located on my personal account and can be found here: [Neuroca-Inc/VDM](https://github.com/Neuroca-Inc/VDM)  
 > Applying physics discoveries to the VDM intelligence model
 
 ***Status Last Updated:*** Jan 31, 2026
